@@ -1,0 +1,162 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-greeting
+------------------------------
+*/
+.top-greeting {
+    width: 100%;
+    padding: 48rem 0 120rem;
+    position: relative;
+    overflow: hidden;
+    @include g.mq() {
+        padding: 96rem 0 219rem;
+    }
+}
+
+.top-greeting-bg-text {
+    position: absolute;
+    background: var(--bg-blue-green);
+    mask-image: url("../img/top-greeting-bg-text-sp.svg");
+    -webkit-mask-image: url("../img/top-greeting-bg-text-sp.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    width: 762rem;
+    height: 204rem;
+    top: 667rem;
+    left: -119rem;
+    @include g.mq() {
+        mask-image: url("../img/top-greeting-bg-text-pc.svg");
+        -webkit-mask-image: url("../img/top-greeting-bg-text-pc.svg");
+        width: 1241rem;
+        height: 332rem;
+        top: 316rem;
+        left: 445rem;
+    }
+}
+
+.top-greeting-inner {
+    @include g.mq() {
+        display: flex;
+        gap: 120rem;
+        align-items: center;
+    }
+}
+
+.top-greeting-pic {
+    width: 265rem;
+    position: relative;
+    margin-bottom: 68rem;
+    @include g.mq() {
+        width: 500rem;
+        margin-bottom: 0;
+    }
+}
+
+.top-greeting-pic img {
+    width: 100%;
+    position: relative;
+    aspect-ratio: 3/4;
+    display: block;
+    z-index: var(--z-index-default);
+}
+
+.top-greeting-pic-decor {
+    width: 100%;
+    height: 112rem;
+    background: var(--bg-blue-green);
+    opacity: 0.8;
+    position: absolute;
+    bottom: -20rem;
+    left: 18rem;
+    z-index: var(--z-index-zero);
+    @include g.mq() {
+        bottom: -38rem;
+        left: 33rem;
+        height: 211rem;
+    }
+}
+
+.top-greeting-body {
+    width: 90%;
+    margin-inline: auto;
+    position: relative;
+    z-index: var(--z-index-default);
+    @include g.mq() {
+        margin-inline: 0;
+        width: 460rem;
+    }
+}
+
+.top-greeting-text {
+    font-weight: bold;
+    font-size: 32rem;
+    margin-top: 32rem;
+    @include g.mq() {
+        font-size: 40rem;
+        margin-top: 56rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.top-greeting-text span {
+    display: block;
+    @include g.mq() {
+        display: inline;
+        &:nth-child(3) {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.top-greeting-paragraph {
+    font-size: 16rem;
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+    line-height: 2.2;
+    margin-top: 32rem;
+    font-weight: 500;
+}
+
+.top-greeting-paragraph--upper span {
+    display: inline;
+    &:nth-child(3) {
+        display: block;
+    }
+    @include g.mq() {
+        display: block;
+    }
+}
+
+.top-greeting-button {
+    font-size: 14rem;
+    margin-top: 32rem;
+    font-weight: bold;
+    @include g.mq() {
+        font-size: 16rem;
+        margin-top: 56rem;
+    }
+}
+
+.top-greeting-pic-bottom {
+    width: 200rem;
+    height: 200rem;
+    position: absolute;
+    bottom: 65rem;
+    left: 248rem;
+
+    @include g.mq() {
+        width: 300rem;
+        height: 300rem;
+        bottom: 106rem;
+        left: 1056rem;
+    }
+    img {
+        z-index: var(--z-index-zero);
+    }
+}

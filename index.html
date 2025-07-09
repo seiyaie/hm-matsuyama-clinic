@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>MATSUYAMA CLINIC</title>
+        <meta name="description" content="MATSUYAMA CLINIC" />
+        <meta name="format-detection" content="telephone=no" />
+
+        <!-- favicon/webclipicon -->
+        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="favicon-source.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="webclip.png" />
+
+        <!-- ogp -->
+        <meta property="og:site_name" content="MATSUYAMA CLINIC" />
+        <meta property="og:url" content="URL" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="MATSUYAMA CLINIC" />
+        <meta property="og:description" content="MATSUYAMA CLINICのホームページ" />
+        <meta property="og:image" content="URL" />
+        <meta property="og:locale" content="ja_JP" />
+        <!-- <meta property="fb:app_id" content="AppID"> -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- <meta name="twitter:site" content="@ユーザー名" /> -->
+        <meta name="twitter:description" content="MATSUYAMA CLINIC" />
+        <meta name="twitter:image:src" content="URL" />
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet" />
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- js -->
+        <script src="js/main.js" type="module"></script>
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header js-header">
+            <h1 class="header-logo js-header-logo">
+                <a href="index.html">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="img/logo-white-sp.svg" />
+                        <img src="img/logo-white.svg" width="300" height="49" alt="Matsuyama Clinic" decoding="async" />
+                    </picture>
+                </a>
+            </h1>
+
+            <nav class="header-nav" aria-label="メインナビゲーション">
+                <ul class="header-list">
+                    <li class="header-item"><a href="#">ご挨拶</a></li>
+                    <li class="header-item"><a href="#">３つの特徴</a></li>
+                    <li class="header-item"><a href="#">インタビュー</a></li>
+                    <li class="header-item"><a href="#">新着情報</a></li>
+                    <li class="header-item"><a href="#">トピック</a></li>
+                </ul>
+                <div class="header-buttons">
+                    <button class="header-menu-button js-menu-button">
+                        <span class="header-menu-button-lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <span class="header-menu-button-text js-menu-text">MENU</span>
+                    </button>
+
+                    <div class="header-entry-button js-entry-button">
+                        <a href="index.html" target="_blank">
+                            <span class="header-entry-button-layer js-entry-button-layer"></span>
+                            <span class="header-entry-button-text"><span class="header-entry-button-text--en">ENTRY</span><span class="header-entry-button-text--jp">エントリー</span></span>
+                            <span class="header-entry-button-arrow"></span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- the end of header -->
+
+        <!-- hamburger menu -->
+        <dialog class="hamburger-menu js-dialog" aria-label="ハンバーガーメニュー">
+            <div class="hamburger-menu-bg js-dialog-bg">
+                <div class="l-container">
+                    <button class="hamburger-close-button js-hamburger-close-button" aria-label="閉じるボタン">
+                        <span class="hamburger-close-button-icon"></span>
+                    </button>
+                    <nav class="hamburger-nav" aria-label="ハンバーガーメニューナビゲーション">
+                        <ul class="hamburger-list">
+                            <li class="hamburger-item">
+                                <a href="index.html" target="_blank">
+                                    <span class="hamburger-item-text-en">GREETING</span>
+                                    <span class="hamburger-item-text-jp">ご挨拶</span>
+                                </a>
+                            </li>
+                            <li class="hamburger-item">
+                                <a href="index.html" target="_blank"><span class="hamburger-item-text-en">FEATURES</span><span class="hamburger-item-text-jp">３つの特徴</span> </a>
+                            </li>
+                            <li class="hamburger-item">
+                                <a href="index.html" target="_blank">
+                                    <span class="hamburger-item-text-en">INTERVIEW</span>
+                                    <span class="hamburger-item-text-jp">インタビュー</span>
+                                </a>
+                            </li>
+                            <li class="hamburger-item">
+                                <a href="index.html" target="_blank">
+                                    <span class="hamburger-item-text-en">NEWS</span>
+                                    <span class="hamburger-item-text-jp">新着情報</span>
+                                </a>
+                            </li>
+                            <li class="hamburger-item">
+                                <a href="index.html" target="_blank">
+                                    <span class="hamburger-item-text-en">TOPIC</span>
+                                    <span class="hamburger-item-text-jp">トピック</span>
+                                </a>
+                            </li>
+                            <li class="hamburger-button">
+                                <a href="index.html" target="_blank">
+                                    <span class="hamburger-button-text"><span class="hamburger-button-text--en">ENTRY</span><span class="hamburger-button-text--jp">エントリー</span></span>
+                                    <span class="hamburger-button-arrow"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </dialog>
+        <!-- the end of hamburger menu -->
+
+        <!-- top kv -->
+        <div class="top-kv js-top-kv">
+            <div class="top-kv-overlay"></div>
+            <div class="top-kv-list">
+                <img src="img/top-kv-item.png" width="720" height="1600" alt="笑顔の男性医療従事者" decoding="async" class="top-kv-item" />
+                <img src="img/top-kv-item02.png" width="720" height="1600" alt="笑顔の女性医療従事者" decoding="async" class="top-kv-item" />
+                <img src="img/top-kv-item03.png" width="720" height="1600" alt="笑顔でパソコン作業をする男性医療従事者" decoding="async" class="top-kv-item" />
+                <img src="img/top-kv-item04.png" width="720" height="1600" alt="フェイスシールドとマスクを着用した女性看護師" decoding="async" class="top-kv-item" />
+            </div>
+            <picture class="top-kv-catch-copy">
+                <source media="(max-width: 768px)" srcset="img/top-kv-catch-sp.svg" />
+                <img src="img/top-kv-catch-pc.svg" width="665" height="269" alt="Face any challenge you face." decoding="async" />
+            </picture>
+        </div>
+        <!-- the end of top kv -->
+
+        <!-- top news -->
+        <section class="top-news l-section-s">
+            <div class="top-news-inner">
+                <div class="c-title-wrapper">
+                    <p class="c-title-en">NEWS</p>
+                    <h2 class="c-title-jp">新着情報</h2>
+                </div>
+                <div class="top-news-body">
+                    <div class="top-news-blog-list">
+                        <article class="top-news-blog">
+                            <a href="">
+                                <div class="top-news-blog-thumbnail"><img src="img/top-news.png" width="600" height="400" alt="歯科衛生士が滅菌パックに入った歯科治療器具を準備している様子" decoding="async" /></div>
+                                <div class="top-news-blog-content">
+                                    <div class="top-news-blog-info">
+                                        <span class="top-news-blog-category">採用情報</span>
+                                        <time class="top-news-blog-date" datetime="2022-11-05">2022.11.05</time>
+                                    </div>
+                                    <h3 class="top-news-blog-title">採用採用説明会開催について</h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="top-news-blog">
+                            <a href="">
+                                <div class="top-news-blog-thumbnail"><img src="img/top-news02.png" width="600" height="400" alt="休憩中の三人の医療従事者が笑顔で会話をしている様子。" decoding="async" /></div>
+                                <div class="top-news-blog-content">
+                                    <div class="top-news-blog-info">
+                                        <span class="top-news-blog-category">採用情報</span>
+                                        <time class="top-news-blog-date" datetime="2022-11-05">2022.11.05</time>
+                                    </div>
+                                    <h3 class="top-news-blog-title">松山クリニック開催 無料の新卒セミナーのご案内</h3>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="top-news-blog">
+                            <a href="">
+                                <div class="top-news-blog-thumbnail"><img src="img/top-news03.png" width="600" height="400" alt="フェイスシールドとマスクを着用した女性看護師が仕事をしている様子" decoding="async" /></div>
+                                <div class="top-news-blog-content">
+                                    <div class="top-news-blog-info">
+                                        <span class="top-news-blog-category">採用情報</span>
+                                        <time class="top-news-blog-date" datetime="2022-11-05">2022.11.05</time>
+                                    </div>
+                                    <h3 class="top-news-blog-title">2023卒の新卒採用を終了致しました。</h3>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="top-news-button">
+                        <a href="index.html" target="_blank" class="c-button c-button-s c-button--white c-button-s--round">
+                            <span class="c-button-text">MORE</span>
+                            <span class="c-button-arrow">
+                                <!-- <svg width="6" height="12" viewBox="0 0 6 12" fill="currentColor">
+                                    <path d="M5.79445 5.47012C6.06789 5.76309 6.06789 6.23887 5.79445 6.53184L1.59445 11.0318C1.32102 11.3248 0.876953 11.3248 0.603516 11.0318C0.330078 10.7389 0.330078 10.2631 0.603516 9.97012L4.30914 5.9998L0.605703 2.02949C0.332266 1.73652 0.332266 1.26074 0.605703 0.967773C0.879141 0.674805 1.3232 0.674805 1.59664 0.967773L5.79664 5.46777L5.79445 5.47012Z" fill="#414F5D" /></svg> -->
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- the end of top news -->
+
+        <!-- top greeting -->
+        <section class="top-greeting">
+            <div class="top-greeting-bg-text"></div>
+            <div class="top-greeting-inner">
+                <div class="top-greeting-pic">
+                    <img src="img/top-greet.png" width="1000" height="1334" alt="笑顔で仕事をしている女性看護師" decoding="async" />
+                    <span class="top-greeting-pic-decor"></span>
+                </div>
+                <div class="top-greeting-body">
+                    <div class="c-title-wrapper">
+                        <p class="c-title-en">GREETING</p>
+                        <h2 class="c-title-jp">ご挨拶</h2>
+                    </div>
+                    <div class="top-greeting-text"><span>命を守る、</span><span>未来を創る。</span><span>共に歩む医療の道。</span></div>
+                    <div class="top-greeting-paragraph">
+                        <div class="top-greeting-paragraph--upper"><span>私たちは、患者さまの笑顔のために</span><span>日々研鑽を重ねています。</span><span>医療の最前線で、あなたの力を活かしませんか？</span></div>
+                        <div class="top-greeting-paragraph--bottom">
+                            <span>共に成長し、地域医療に貢献できる仲間を求めています。</span>
+                        </div>
+                    </div>
+                    <div class="top-greeting-button">
+                        <a href="index.html" target="_blank" class="c-button c-button-s c-button--white c-button-s--exp">
+                            <span class="c-button-text">私たちからのご挨拶</span>
+                            <span class="c-button-arrow"> </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="top-greeting-pic-bottom">
+                    <img src="img/top-greet-bottom.png" width="600" height="600" alt="歯科衛生士が滅菌パックに入った歯科治療器具を準備している様子" decoding="async" />
+                </div>
+            </div>
+        </section>
+        <!-- the end of top greeting -->
+
+        <!-- top feature -->
+        <section class="top-feature">
+            <div class="top-feature-bg-logo">
+                <img src="img/top-feature-bg-logo.svg" width="745" height="514" alt="" decoding="async" />
+            </div>
+            <div class="top-feature-inner">
+                <div class="top-feature-header">
+                    <div class="c-title02-wrapper">
+                        <p class="c-title02-en">FEATURE</p>
+                        <h2 class="c-title02-jp c-title02-jp--right">
+                            <span class="c-title02-jp-line"></span>
+                            <span>３つの特徴</span>
+                        </h2>
+                    </div>
+                    <p class="top-feature-text">最新の設備と公平な評価制度、そしてフラットな組織文化が、あなたの可能性を最大限に引き出します。共に学び、高め合える環境で、医療のプロフェッショナルとして輝きましょう。</p>
+                </div>
+                <ul class="top-feature-list">
+                    <li class="top-feature-item">
+                        <a href="index.html" target="_blank" aria-label="セミナールームを設置の詳細を表示">
+                            <img src="img/top-feature-item.png" width="1920" height="1280" alt="ペンとクリップボードを持ってメモを取る医療従事者" decoding="async" />
+                            <div class="top-feature-item-overlay"></div>
+                            <span class="top-feature-item-text">
+                                <span class="top-feature-item-jp">セミナールームを設置</span>
+                                <span class="top-feature-item-en">Set up seminar room</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="top-feature-item">
+                        <a href="index.html" target="_blank" aria-label="フラットな環境の詳細を表示">
+                            <img src="img/top-feature-item02.png" width="1920" height="1280" alt="医師と看護師が会議室で笑顔で話し合っている様子" decoding="async" />
+                            <div class="top-feature-item-overlay"></div>
+                            <span class="top-feature-item-text">
+                                <span class="top-feature-item-jp">フラットな環境</span>
+                                <span class="top-feature-item-en">Inclusive Workplace</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="top-feature-item">
+                        <a href="index.html" target="_blank" aria-label="制度の整備と公平な評価の詳細を表示">
+                            <img src="img/top-feature-item03.png" width="1920" height="1280" alt="会議でホワイトボードに貼ってある資料を指して、説明をする女性医師" decoding="async" />
+                            <div class="top-feature-item-overlay"></div>
+                            <span class="top-feature-item-text">
+                                <span class="top-feature-item-jp">制度の整備と公平な評価</span>
+                                <span class="top-feature-item-en">Fair Assessment</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- the end of top feature -->
+
+        <!-- top-img-separate -->
+        <div class="top-img-separate"></div>
+        <!-- end top-img-separate -->
+
+        <!-- top interview -->
+        <section class="top-interview">
+            <div class="top-interview-bg-wrapper">
+                <div class="top-interview-bg-text"></div>
+            </div>
+            <div class="top-interview-inner l-container">
+                <div class="c-title02-wrapper c-title02-wrapper--center">
+                    <p class="c-title02-en">INTERVIEW</p>
+                    <h2 class="c-title02-jp c-title02-jp--center">
+                        <span class="c-title02-jp-line"></span>
+                        <span>インタビュー</span>
+                        <span class="c-title02-jp-line"></span>
+                    </h2>
+                </div>
+                <div class="top-interview-list">
+                    <article class="top-interview-item">
+                        <div class="top-interview-thumbnail">
+                            <img src="img/top-interview-item.png" width="1048" height="780" alt="白い制服を着た3人の女性が、並んで景色を見ている様子。" decoding="async" />
+                            <h3 class="top-interview-thumbnail-text"><span>チームの絆が</span><span>患者さまを支える力に。</span></h3>
+                        </div>
+                        <div class="top-interview-button">
+                            <a href="index.html" target="_blank" class="c-button c-button-m c-button--light-blue">
+                                <span class="c-button-text">看護師のインタビュー一覧</span>
+                                <span class="c-button-arrow"></span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="top-interview-item">
+                        <div class="top-interview-thumbnail">
+                            <img src="img/top-interview-item02.png" width="1048" height="780" alt="会議室で、パソコンで作業する女性医師。" decoding="async" />
+                            <h3 class="top-interview-thumbnail-text"><span>仕事もプライベートも</span><span>イキイキと。</span></h3>
+                        </div>
+                        <div class="top-interview-button">
+                            <a href="index.html" target="_blank" class="c-button c-button-m c-button--green">
+                                <span class="c-button-text">事務員のインタビュー一覧</span>
+                                <span class="c-button-arrow"></span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- the end of top interview -->
+
+        <!-- top entry -->
+        <section class="top-entry">
+            <div class="top-entry-list">
+                <img src="img/top-entry.png" width="1920" height="1279" alt="笑顔の女性医師が資料を手に持っている" decoding="async" class="top-entry-item" />
+                <img src="img/top-entry02.png" width="1920" height="1279" alt="優しい表情で座っている男性医師" decoding="async" class="top-entry-item" />
+                <img src="img/top-entry03.png" width="1920" height="1279" alt="笑顔で女性医師が聴診器を使用している様子" decoding="async" class="top-entry-item" />
+            </div>
+            <div class="top-entry-body l-container">
+                <div class="c-title02-wrapper">
+                    <p class="c-title02-en">ENTRY</p>
+                    <h2 class="c-title02-jp c-title02-jp--right">
+                        <span class="c-title02-jp-line"></span>
+                        <span>エントリー</span>
+                    </h2>
+                </div>
+                <div class="top-entry-text">
+                    <span>あなたの一歩が、多くの笑顔につながります。</span>
+                    <span>いま、その第一歩を踏み出す時です。</span>
+                    <span>ぜひ、あなたの想いをお聞かせください。</span>
+                </div>
+                <div class="top-entry-button">
+                    <a href="index.html" target="_blank" class="c-button c-button-entry c-button--blue">
+                        <span class="c-button-text top-entry-button-text"><span class="top-entry-button-text--en">ENTRY</span><span class="top-entry-button-text--jp">エントリー</span></span>
+                        <span class="c-button-arrow c-button-arrow--l"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- the end of top entry -->
+
+        <!-- footer -->
+        <footer class="footer l-section-s">
+            <div class="l-container">
+                <div class="footer-inner">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="img/logo-blue-sp.svg" />
+                                <img src="img/logo-blue.svg" width="283" height="42" alt="Matsuyama Clinic" decoding="async" />
+                            </picture>
+                        </a>
+                    </div>
+                    <ul class="footer-list">
+                        <li class="footer-item"><a href="index.html" target="_blank">ご挨拶</a></li>
+                        <li class="footer-item"><a href="#">３つの特徴</a></li>
+                        <li class="footer-item"><a href="#">インタビュー</a></li>
+                        <li class="footer-item"><a href="#">新着情報</a></li>
+                        <li class="footer-item"><a href="#">トピック</a></li>
+                        <li class="footer-item--button">
+                            <a href="#" class="c-button c-button--light-blue c-button-s"
+                                ><span class="c-button-text">コーポレートサイト</span>
+                                <span class="c-button-arrow"><span class="c-button-arrow"></span> </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-inner02">
+                    <ul class="footer-list02">
+                        <li class="footer-item02"><a href="#">サイトマップ</a></li>
+                        <li class="footer-item02"><a href="#">プライバシーポリシー</a></li>
+                    </ul>
+                    <small class="footer-copyright">Copyright©All Right Reserved.</small>
+                </div>
+            </div>
+        </footer>
+        <!-- the end of footer -->
+    </body>
+</html>

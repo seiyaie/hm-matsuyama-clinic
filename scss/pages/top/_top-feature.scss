@@ -1,0 +1,139 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-feature
+------------------------------
+*/
+
+.top-feature {
+    background: var(--bg-feature);
+    padding: 120rem 0;
+    max-width: var(--width-content);
+    margin-inline: auto;
+    overflow: hidden;
+    position: relative;
+    @include g.mq() {
+        padding: 120rem 0 160rem;
+    }
+}
+
+.top-feature-bg-logo {
+    position: absolute;
+    top: -133rem;
+    left: 73rem;
+    width: 630rem;
+    height: 434rem;
+    z-index: var(--z-index-zero);
+    @include g.mq() {
+        top: 141rem;
+        left: -135rem;
+        width: 880rem;
+        height: 618rem;
+    }
+}
+
+.top-feature-inner {
+    width: min(90%, var(--width-content));
+    margin-inline: auto;
+    position: relative;
+    z-index: var(--z-index-default);
+}
+
+.top-feature-header {
+    @include g.mq() {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.top-feature-text {
+    color: var(--font-base);
+    margin-top: 32rem;
+    line-height: 2;
+    @include g.mq() {
+        margin-top: 0;
+        width: 731rem;
+        font-size: 16rem;
+    }
+}
+
+.top-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24rem;
+    margin-top: 40rem;
+    @include g.mq() {
+        margin-top: 70rem;
+        flex-direction: row;
+        gap: 22rem;
+    }
+}
+
+.top-feature-item {
+    position: relative;
+    counter-increment: item-counter;
+    transition: var(--transition);
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+            img {
+                transform: scale(1.05);
+            }
+            .top-feature-item-text {
+                color: var(--font-black);
+            }
+        }
+    }
+}
+
+.top-feature-item {
+    overflow: hidden;
+    img {
+        transition: var(--transition-transform);
+        object-fit: cover;
+        aspect-ratio: 352/280;
+        @include g.mq() {
+            aspect-ratio: 352/440;
+        }
+    }
+}
+
+.top-feature-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--mask-feature);
+}
+
+.top-feature-item-text {
+    position: absolute;
+    bottom: 24rem;
+    left: 20rem;
+    color: var(--font-white);
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.top-feature-item-jp {
+    font-size: 22rem;
+    font-weight: bold;
+    &::before {
+        content: "0" counter(item-counter);
+        display: block;
+        font-size: 18rem;
+        font-weight: 600;
+        line-height: 1;
+    }
+}
+
+.top-feature-item-en {
+    text-transform: uppercase;
+    font-size: 14rem;
+    line-height: 1;
+    font-weight: 600;
+}

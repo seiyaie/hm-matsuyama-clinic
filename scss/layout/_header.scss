@@ -1,0 +1,231 @@
+@use "../global" as g;
+
+/*!
+layout > header
+------------------------------
+*/
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 64rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: var(--z-index-header);
+    @include g.mq() {
+        height: 106rem;
+    }
+    &.is-fixed {
+        position: fixed;
+        top: -64rem;
+        right: 0;
+        width: 100%;
+        .header-item a {
+            color: var(--font-base);
+            &::after {
+                background-color: var(--font-base);
+            }
+        }
+    }
+    &.menu-open {
+        position: fixed;
+        top: -64rem;
+    }
+}
+
+.header-logo a {
+    display: inline-block;
+    width: 157rem;
+    height: 36rem;
+    margin-left: 20rem;
+    @include g.mq() {
+        width: 300rem;
+        height: 49rem;
+        margin-left: 40rem;
+    }
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-list {
+    display: none;
+    @include g.mq() {
+        display: flex;
+        align-items: center;
+        font-size: 16rem;
+    }
+}
+
+.header-item a {
+    position: relative;
+    color: var(--font-white);
+    font-weight: bold;
+    margin-left: 32rem;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -10rem;
+        left: 0;
+        height: 1px;
+        width: 0;
+        background-color: var(--font-white);
+        transition: var(--transition-border);
+    }
+    @media (any-hover: hover) {
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+.header-buttons {
+    display: flex;
+    margin-left: 64rem;
+}
+
+.header-menu-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background-color: var(--bg-base);
+    color: var(--font-base);
+    width: 64rem;
+    height: 64rem;
+    line-height: 1;
+    transition: background-color 0.15s;
+    @include g.mq() {
+        display: none;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--bg-gray);
+            color: var(--font-white);
+            .header-menu-button-lines span {
+                background-color: var(--font-white);
+            }
+        }
+    }
+    &.is-active {
+        .header-menu-button-lines span {
+            width: 24rem;
+            &:nth-child(1) {
+                transform: scale(1.2) translateY(6rem) rotate(-36deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: scale(1.2) translateY(-6rem) rotate(36deg);
+            }
+        }
+    }
+}
+
+
+.header-menu-button-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.header-menu-button-lines span {
+    background-color: var(--font-base);
+    width: 20rem;
+    height: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.header-menu-button-text {
+    font-size: 12rem;
+    letter-spacing: 0.04em;
+    padding-left: 0.04em;
+    font-family: var(--font-family-en);
+}
+
+.header-entry-button.is-hidden {
+    display: none;
+}
+
+.header-entry-button a {
+    position: relative;
+    width: 64rem;
+    height: 100%;
+    background: var(--bg-blue);
+    display: block;
+    z-index: var(--z-index-zero);
+    @include g.mq() {
+        width: 181rem;
+        height: 106rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 38rem;
+    }
+    @media (any-hover: hover) {
+        &:hover .header-entry-button-layer {
+            opacity: 1;
+        }
+    }
+}
+
+.header-entry-button-layer {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-blue-hovered);
+    opacity: 0;
+    z-index: var(--z-index-minus);
+    transition: var(--transition-opacity);
+    pointer-events: none;
+}
+
+.header-entry-button-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--font-white);
+    line-height: 1;
+    justify-content: center;
+    align-items: center;
+    @include g.mq() {
+        gap: 4rem;
+    }
+}
+
+.header-entry-button-text--en {
+    font-size: 14rem;
+    letter-spacing: 0.04em;
+    padding-left: 0.04em;
+    @include g.mq() {
+        font-size: 20rem;
+    }
+}
+
+.header-entry-button-text--jp {
+    font-size: 10rem;
+    font-weight: bold;
+    padding-left: 0.05em;
+    @include g.mq() {
+        font-size: 12rem;
+        letter-spacing: 0.025em;
+        padding-left: 0.025em;
+    }
+}
+
+.header-entry-button-arrow {
+    display: none;
+    @include g.mq() {
+        display: inline-block;
+        width: 24rem;
+        height: 24rem;
+        background-image: url("../img/arrow.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

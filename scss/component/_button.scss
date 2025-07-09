@@ -1,0 +1,151 @@
+@use "../global" as g;
+
+/*!
+component > button
+------------------------------
+*/
+
+.c-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100vh;
+    transition: var(--transition);
+    position: relative;
+    z-index: var(--z-index-zero);
+
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.05);
+            .c-button-arrow {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &--white {
+        border: 1rem solid var(--font-base);
+    }
+
+    &--light-blue {
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: var(--z-index-minus);
+            background: var(--bg-light-blue);
+            border-radius: inherit;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: var(--z-index-minus);
+            opacity: 0;
+            border-radius: inherit;
+            transition: var(--transition-opacity);
+            background: var(--bg-light-blue-hovered);
+        }
+        @media (any-hover: hover) {
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--blue {
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: var(--z-index-minus);
+            background: var(--bg-blue);
+            border-radius: inherit;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: var(--z-index-minus);
+            opacity: 0;
+            border-radius: inherit;
+            transition: var(--transition-opacity);
+            background: var(--bg-blue-hovered);
+        }
+        @media (any-hover: hover) {
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &--green {
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: var(--z-index-minus);
+            background: var(--bg-green);
+            border-radius: inherit;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: var(--z-index-minus);
+            opacity: 0;
+            border-radius: inherit;
+            transition: var(--transition-opacity);
+            background: var(--bg-green-hovered);
+        }
+        @media (any-hover: hover) {
+            &:hover::after {
+                opacity: 1;
+            }
+        }
+    }
+}
+.c-button-s {
+    gap: 16rem;
+    padding: 14rem 24rem;
+    &--round {
+        @include g.mq() {
+            padding: 40rem 20rem;
+            width: 100rem;
+            height: 100rem;
+            gap: 10rem;
+        }
+    }
+    &--exp {
+        @include g.mq() {
+            padding: 18rem 32rem;
+            gap: 56rem;
+        }
+    }
+}
+.c-button-m {
+    gap: 32rem;
+    padding: 18rem 32rem;
+}
+.c-button-entry {
+    padding: 18rem 32rem 14rem;
+    gap: 80rem;
+}
+
+.c-button-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mask-image: url(../img/arrow02.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    width: 6rem;
+    height: 12rem;
+    background-color: currentColor;
+    transition: var(--transition-transform);
+    &--l {
+        width: 10rem;
+        height: 18rem;
+    }
+}

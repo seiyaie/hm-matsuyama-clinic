@@ -1,0 +1,74 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-entry
+------------------------------
+*/
+
+.top-entry {
+    background-color: var(--bg-base-light);
+    @include g.mq() {
+        max-width: var(--width-content);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 740rem 560rem;
+    }
+}
+
+.top-entry-list {
+    display: flex;
+    max-width: 100%;
+    gap: 0;
+    overflow: hidden;
+}
+
+.top-entry-item {
+    width: calc(100% / 3);
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    aspect-ratio: 127/240;
+}
+
+.top-entry-body {
+    padding: 48rem 0;
+    @include g.mq() {
+        padding: 78rem 72rem;
+    }
+}
+
+.top-entry-text {
+    line-height: 2;
+    font-weight: 500;
+    margin-top: 20rem;
+    @include g.mq() {
+        font-size: 16rem;
+        margin-top: 30rem;
+    }
+    span {
+        display: block;
+    }
+}
+
+.top-entry-button {
+    color: var(--font-white);
+    margin-top: 20rem;
+    @include g.mq() {
+        margin-top: 30rem;
+    }
+}
+
+.top-entry-button-text {
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+}
+
+.top-entry-button-text--en {
+    font-family: var(--font-family-en);
+    font-size: 24rem;
+}
+.top-entry-button-text--jp {
+    font-size: 14rem;
+    font-weight: 500;
+}

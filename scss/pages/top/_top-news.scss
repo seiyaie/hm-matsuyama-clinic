@@ -1,0 +1,109 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-news
+------------------------------
+*/
+
+.top-news {
+    background-color: var(--bg-base);
+    max-width: 1370rem;
+    @include g.mq() {
+        position: relative;
+        margin-top: -80rem;
+        z-index: var(--z-index-default);
+    }
+}
+
+.top-news-inner {
+    padding-left: 20rem;
+    @include g.mq() {
+        padding-left: 120rem;
+    }
+}
+
+.top-news-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 32rem;
+    margin-top: 32rem;
+    @include g.mq() {
+        width: 1200rem;
+        gap: 56rem;
+        grid-template-columns: 964rem 1fr;
+    }
+}
+
+.top-news-blog-list {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    gap: 24rem;
+    padding-right: 20rem;
+    @include g.mq() {
+        overflow-x: visible;
+        gap: 32rem;
+        padding-right: 0rem;
+    }
+}
+
+.top-news-blog {
+    flex-shrink: 0;
+    width: 257rem;
+    transition: var(--transition);
+    transform-origin: center center;
+    @include g.mq() {
+        width: 300rem;
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            opacity: 0.7;
+            .top-news-blog-thumbnail img {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.top-news-blog-thumbnail {
+    overflow: hidden;
+    img {
+        aspect-ratio: 257/171;
+        transition: var(--transition-transform);
+    }
+}
+
+.top-news-blog-content {
+    margin-top: 13rem;
+}
+
+.top-news-blog-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-light-base);
+    font-weight: 500;
+    font-size: 14rem;
+}
+
+.top-news-blog-title {
+    line-height: 1.5;
+    font-size: 18rem;
+    font-weight: 700;
+    margin-top: 7rem;
+}
+
+.top-news-button {
+    justify-self: end;
+    margin-right: 20rem;
+    font-size: 14rem;
+    font-weight: 600;
+    line-height: 1;
+    @include g.mq() {
+        margin-right: 0;
+        justify-self: auto;
+    }
+}

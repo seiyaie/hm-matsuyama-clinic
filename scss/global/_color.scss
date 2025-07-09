@@ -1,0 +1,27 @@
+/*!
+global > color
+------------------------------
+*/
+
+:root {
+    //background colors
+    --bg-base: #f5f8f9;
+    --bg-base-light: #e0ebee;
+    --bg-gray: #444444;
+    --bg-blue: linear-gradient(180deg, #75c2eb 0, #43cfcf 50%, #4bd2d7 100%, #43cfcf 150%, #75c2eb 200%);
+    --bg-blue-hovered: #75c2eb;
+    --bg-light-blue: linear-gradient(139deg, #e4eff9 0%, #e3f3f3 45%, #c2e2f1 100%);
+    --bg-light-blue-hovered: #c2e2f1;
+    --bg-green: linear-gradient(139deg, #e4f9f8 0%, #e3f3e9 45%, #c8f1c2 100%);
+    --bg-green-hovered: #c3f1d4;
+    --bg-blue-green: linear-gradient(180deg, #d8e5e7 0%, #d2eed9 36%, #c6ddff 100%);
+    --bg-feature: linear-gradient(180deg, #e0ebee 0%, rgba(224, 235, 238, 0) 100%);
+    --mask-feature: linear-gradient(rgba(39, 56, 78, 0) 0%, rgba(39, 56, 78, 0.3) 100%);
+    --mask-kv: linear-gradient(rgba(39, 56, 78, 0.3) 0%, rgba(39, 56, 78, 0.15) 30%, rgba(39, 56, 78, 0) 100%);
+    --hamburger-button: rgba(255, 255, 255, 0.2);
+    //font colors
+    --font-light-base: #919ca7;
+    --font-base: #414f5d;
+    --font-white: #ffffff;
+    --font-black: #000000;
+}

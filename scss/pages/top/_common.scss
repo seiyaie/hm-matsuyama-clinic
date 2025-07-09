@@ -1,0 +1,18 @@
+@use "../../global" as g;
+
+/*!
+pages > top > common
+------------------------------
+*/
+
+.top-img-separate {
+    background-image: url(../img/top-separate-sp.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 19/16;
+    @include g.mq() {
+        background-image: url(../img/top-separate.png);
+        aspect-ratio: 180/59;
+    }
+}

@@ -1,0 +1,54 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+.c-title-wrapper {
+    display: flex;
+    gap: 12rem;
+    align-items: center;
+}
+
+.c-title-en {
+    font-size: 32rem;
+    line-height: 1.5;
+    font-family: var(--font-family-en);
+    @include g.mq() {
+        font-size: 42rem;
+    }
+}
+
+.c-title-jp {
+    font-size: 14rem;
+    font-weight: 500;
+}
+
+.c-title02-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.c-title02-en {
+    font-size: 32rem;
+    line-height: 1.5;
+    font-family: var(--font-family-en);
+    @include g.mq() {
+        font-size: 42rem;
+    }
+}
+
+.c-title02-jp {
+    display: flex;
+    align-items: center;
+    font-size: 14rem;
+    gap: 8rem;
+    font-weight: 500;
+    color: var(--font-light-base);
+}
+
+.c-title02-jp-line {
+    flex-grow: 1;
+    height: 1rem;
+    background-color: var(--font-light-base);
+}
