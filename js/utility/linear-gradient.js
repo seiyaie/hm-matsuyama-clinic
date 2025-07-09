@@ -1,4 +1,3 @@
-
 export const entryButtonLinearGradient = () => {
     const entryButton = document.querySelector(".js-entry-button a");
     // entryボタンがない場合return

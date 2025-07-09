@@ -11,8 +11,7 @@ export const intersectionObserver = () => {
 
     // slideDown keyframes
     const slideDownKeyframes = {
-        // transform: ["translateY(-100%)", "translateY(0)"],
-        transform: "translateY(64rem)"
+        transform: "translateY(64rem)",
     };
 
     // closing keyframes
