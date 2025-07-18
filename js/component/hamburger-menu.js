@@ -31,6 +31,21 @@ export const hamburgerMenu = () => {
         fill: "forwards",
     };
 
+    // スクロール制御 for iOS Safari
+    const preventScroll = (e) => e.preventDefault();
+
+    const disableScroll = () => {
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+        document.addEventListener("touchmove", preventScroll, { passive: false });
+    };
+
+    const enableScroll = () => {
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
+        document.removeEventListener("touchmove", preventScroll);
+    };
+
     // functions
 
     // ハンバーガーメニューopen関数
@@ -38,8 +53,7 @@ export const hamburgerMenu = () => {
         entryButton.classList.add("is-hidden"); // entryボタン非表示
         menuButton.classList.add("is-active");
         menuButton.querySelector(".js-menu-text").textContent = "CLOSE"; // menuボタンのテキストをcloseにする。
-        document.body.style.overflow = "hidden"; // 背景固定
-        document.documentElement.style.overflow = "hidden";
+        disableScroll();
 
         if (header.classList.contains("is-fixed")) {
             header.classList.remove("is-fixed");
@@ -55,6 +69,7 @@ export const hamburgerMenu = () => {
         entryButton.classList.remove("is-hidden"); // entryボタン表示
         menuButton.classList.remove("is-active");
         menuButton.querySelector(".js-menu-text").textContent = "MENU";
+        enableScroll();
 
         if (header.classList.contains("is-menu-open")) {
             header.classList.add("is-fixed");
