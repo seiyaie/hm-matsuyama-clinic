@@ -38,6 +38,8 @@ export const hamburgerMenu = () => {
         entryButton.classList.add("is-hidden"); // entryボタン非表示
         menuButton.classList.add("is-active");
         menuButton.querySelector(".js-menu-text").textContent = "CLOSE"; // menuボタンのテキストをcloseにする。
+        document.body.style.overflow = "hidden"; // 背景固定
+        document.documentElement.style.overflow = "hidden";
 
         if (header.classList.contains("is-fixed")) {
             header.classList.remove("is-fixed");
@@ -46,7 +48,6 @@ export const hamburgerMenu = () => {
         }
         dialog.show();
         dialog.animate(openingKeyframes, options);
-        document.body.style.overflow = "hidden"; // 背景固定
     };
 
     // ハンバーガーメニューclose関数
@@ -66,6 +67,7 @@ export const hamburgerMenu = () => {
         closingAnim.onfinish = () => {
             dialog.close();
             document.body.style.overflow = ""; // 背景固定解除
+            document.documentElement.style.overflow = "";
         };
     };
 
