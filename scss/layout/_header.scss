@@ -29,7 +29,7 @@ layout > header
             }
         }
     }
-    &.menu-open {
+    &.is-menu-open {
         position: fixed;
         top: -64rem;
     }
