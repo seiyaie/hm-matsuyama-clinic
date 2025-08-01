@@ -14,6 +14,7 @@ layout > header
     align-items: center;
     justify-content: space-between;
     z-index: var(--z-index-header);
+    background-color: transparent;
     @include g.mq() {
         height: 106rem;
     }
@@ -99,6 +100,8 @@ layout > header
     height: 64rem;
     line-height: 1;
     transition: background-color 0.15s;
+    overflow: hidden;
+    transform: translateZ(0);
     @include g.mq() {
         display: none;
     }
@@ -127,7 +130,6 @@ layout > header
     }
 }
 
-
 .header-menu-button-lines {
     display: flex;
     flex-direction: column;
@@ -139,6 +141,7 @@ layout > header
     width: 20rem;
     height: 1rem;
     transition: transform 0.3s ease;
+    will-change: transform;
 }
 
 .header-menu-button-text {

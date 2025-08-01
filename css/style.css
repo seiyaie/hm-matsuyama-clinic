@@ -310,6 +310,7 @@ layout > header
   align-items: center;
   justify-content: space-between;
   z-index: var(--z-index-header);
+  background-color: transparent;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -401,6 +402,8 @@ layout > header
   height: 64rem;
   line-height: 1;
   transition: background-color 0.15s;
+  overflow: hidden;
+  transform: translateZ(0);
 }
 @media screen and (min-width: 768px) {
   .header-menu-button {
@@ -440,6 +443,7 @@ layout > header
   width: 20rem;
   height: 1rem;
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .header-menu-button-text {
