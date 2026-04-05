@@ -1,5 +1,7 @@
 # Web サイト：MATSUYAMA CLINIC
 
+![MATSUYAMA CLINIC サムネイル](./img/docs/thumbnail.jpg)
+
 ## 概要
 
 Hello Mentor のコーディング課題として制作した MATSUYAMA CLINIC という架空の病院の Web サイトです。提供されたFigma デザインカンプからコーディングをしました。
